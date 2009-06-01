@@ -66,6 +66,7 @@ sub body {
       <li>http://troywill.com/i4y/css/style.css</li>
       <li>http://losangeles.craigslist.org/sfv/cpg/1191803929.html</li>
       <li><a href='http://losangeles.craigslist.org/sfv/cpg/1191366011.html'>RoR Developer (Burbank)</a></li>
+      <li><a href='http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/'>Free CSS layouts</a></li>
       </ul>
   </div>
   <div id='footer'>
