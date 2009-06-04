@@ -71,8 +71,8 @@ BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
 *[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }</a>
 
 @media print {
-  h1            { page-break-before: always }
-  h1, h2, h3,
-  h4, h5, h6    { page-break-after: avoid }
-  ul, ol, dl    { page-break-before: avoid }
+    h1            { page-break-before: always }
+    h1, h2, h3,
+    h4, h5, h6    { page-break-after: avoid }
+    ul, ol, dl    { page-break-before: avoid }
 }
