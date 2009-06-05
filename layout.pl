@@ -3,22 +3,28 @@ use strict;
 use warnings;
 
 my %colors = &get_colors;
+my $default_css = &get_default_css;
 
 ########## Begin Section: User defined settings ##########
 my $html_file = 'css.html';
 my $stylesheet_file = 'style.css';
-my $header_background_color = $colors{'r1'};
+# my $header_background_color = $colors{'r1'};
+my $header_background_color = '#443266';
 
 my $header_height = '15%';
 $header_height = '1.5em';
-my $sidebar_background_color = 'rgb(207,226,243)';
+# my $sidebar_background_color = 'rgb(207,226,243)';
+my $sidebar_background_color = '#C3C3E5';
 my $sidebar_width = '10em';
 my $sidebar_top = $header_height;
-my $main_background_color = 'rgb(255,242,204)';
+# my $main_background_color = 'rgb(255,242,204)';
+my $main_background_color = '#F1F0FF';
+
 
 my $footer_height = '100px';
-$footer_height = '50px';
-my $footer_background_color = $colors{'p1'};
+$footer_height = '1.5em';
+# my $footer_background_color = $colors{'p1'};
+my $footer_background_color = '#8C489F';
 
 ########## End Section: User defined settings ##########
 
@@ -47,7 +53,8 @@ print OUT $header;
 ########## Subroutines only below this line ##########
 
 sub validators {
-    return '<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a></p>';
+    my $type1 = '<p><a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a></p>';
+    my $type2 = '<p><a href="http://validator.w3.org/check?uri=referer">XHTML validator</a><a href="http://jigsaw.w3.org/css-validator/check/referer">CSS validator</a></p>';
 }
 
 sub body {
@@ -104,10 +111,11 @@ sub header_css {
   right: 0;
   bottom: auto;
   left: 0;
+  color: white;
   background-color: $header_background_color;
-
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 #header h1 {
@@ -164,17 +172,23 @@ sub footer_css {
   right: 0;
   bottom: 0;
   left: 0;
+  color: white;
   background-color: $footer_background_color;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
 }
 
 #footer h1 {
-/*   font-size: 1em; */
-/*   display:inline; */
-    float: left;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    display: inline;
 }
 
 #footer p {
-/*     display:inline; */
+    display:inline;
 }
 END
   return $footer_css;
@@ -188,13 +202,7 @@ sub stylesheet {
   # See http://www.w3.org/TR/CSS21/sample.html
   open(STYLESHEET, '>style.css');
   my $stylesheet = <<"END";
-html, address, blockquote, body,
-dd, div, dl, dt,
-fieldset, form, frame, frameset,
-h1, h2, h3, h4, h5, h6,
-noframes, ol, p, ul, center,
-dir, hr, menu, pre   { display: block }
-body { height: 8.5in }
+$default_css
 $header_css
 $sidebar_css
 $main_css
@@ -212,7 +220,9 @@ sub get_colors {
     return %colors;
 }
 
-__END__
+sub get_default_css {
+
+  my $default = <<'END';
 html, address,
 blockquote,
 body, dd, div,
@@ -278,16 +288,20 @@ center          { text-align: center }
 :link, :visited { text-decoration: underline }
 :focus          { outline: thin dotted invert }
 
-<a name=bidi>/* Begin bidirectionality settings (do not change) */
+/* Begin bidirectionality settings (do not change) */
 BDO[DIR="ltr"]  { direction: ltr; unicode-bidi: bidi-override }
 BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
 
 *[DIR="ltr"]    { direction: ltr; unicode-bidi: embed }
-*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }</a>
+*[DIR="rtl"]    { direction: rtl; unicode-bidi: embed }
 
 @media print {
     h1            { page-break-before: always }
     h1, h2, h3,
     h4, h5, h6    { page-break-after: avoid }
     ul, ol, dl    { page-break-before: avoid }
+}
+END
+
+  return $default;
 }
