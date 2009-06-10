@@ -299,6 +299,21 @@ BDO[DIR="rtl"]  { direction: rtl; unicode-bidi: bidi-override }
     h4, h5, h6    { page-break-after: avoid }
     ul, ol, dl    { page-break-before: avoid }
 }
+
+/* http://www.htmldog.com/examples/inputcheckboxes.html June 10, 2008 */
+
+fieldset {
+    padding: 0 1em 1em 1em;
+}
+
+legend {
+    padding: 1em;
+}
+
+label {
+    float: left;
+    width: 6em;
+}
 END
 
   return $default;
