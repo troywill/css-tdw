@@ -69,9 +69,8 @@ sub body {
   <div id='main'>
       <h1>main</h1>
       <ul>
-      <li>http://troywill.com/i4y/css/css.html</li>
-      <li>http://troywill.com/i4y/css/style.css</li>
-      <li><a href='http://www.smashingmagazine.com/2007/01/12/free-css-layouts-and-templates/'>Free CSS layouts</a></li>
+      <li>http://www.w3.org/TR/CSS21/visuren.html#fixed-positioning</li>
+      <li></li>
       </ul>
   </div>
   <div id='footer'>
