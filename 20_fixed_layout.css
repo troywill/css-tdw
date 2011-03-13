@@ -27,7 +27,8 @@
     right: auto;
     bottom: 1.5em;
     left: 0;
-    background-color: #C3C3E5
+    background-color: #C3C3E5;
+    overflow: auto;
 }
 
 #main {
@@ -66,4 +67,13 @@
 
 #footer p {
     display:inline;
+}
+
+ol,ul.sidebar {
+    margin-left: .5em;
+}
+
+ul.sidebar {
+    list-style-type: none;
+    padding-left: 0px;
 }
