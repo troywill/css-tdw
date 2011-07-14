@@ -6,8 +6,8 @@ my %colors = &get_colors;
 my $default_css = &get_default_css;
 
 ########## Begin Section: User defined settings ##########
-my $html_file = '../app/views/layouts/application.html.erb';
-my $stylesheet_file = 'stylesheets/style.css';
+my $html_file = '../../../app/views/layouts/application.html.erb';
+my $stylesheet_file = '../../../public/stylesheets/style.css';
 
 # my $header_background_color = $colors{'r1'};
 my $header_background_color = '#443266';
