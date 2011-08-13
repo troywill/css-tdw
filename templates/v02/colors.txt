@@ -1,0 +1,5 @@
+.primary-1 { background-color: #CD0074 }
+.primary-2 { background-color: #992667 }
+.primary-3 { background-color: #85004B }
+.primary-4 { background-color: #E6399B }
+.primary-5 { background-color: #E667AF }

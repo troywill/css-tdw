@@ -1,3 +1,4 @@
+.primary-1 { background-color: #CD0074 }
 html, address,
 blockquote,
 body, dd, div,
@@ -121,7 +122,7 @@ label {
   right: auto;
   bottom: 1.5em;
   left: 0;
-  background-color: #C3C3E5
+  /* background-color: #C3C3E5 */
 }
 
 #sidebar ul {
