@@ -62,15 +62,14 @@ sub body {
   <div id='header'>
       <h1>header</h1>
   </div>
-  <div id='navigation'>
+  <div id='sidebar'>
       <h1>navigation</h1>
       <!-- see "Lists as Navigation", page 140, HTML Dog -->
       <!-- see "Doing Away With Unwanted Padding and Margins", page 144, HTML Dog -->
       <ul>
+        <li><%= link_to "root", root_path</li>
         <li>Run rake routes >> appliation.html.erb and edit to get links</li>
-        <li>link</li>
-        <li>link</li>
-        <li>link</li>
+
       </ul>
   </div>
   <div id='main'>
@@ -153,6 +152,12 @@ sub sidebar_css {
   bottom: $footer_height;
   left: 0;
   background-color: $sidebar_background_color
+}
+
+#sidebar ul {
+ margin: 0;
+ padding: 0;
+ padding-left: .5em;
 }
 END
   return $sidebar_css;
