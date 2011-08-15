@@ -67,7 +67,7 @@ sub body {
       <!-- see "Lists as Navigation", page 140, HTML Dog -->
       <!-- see "Doing Away With Unwanted Padding and Margins", page 144, HTML Dog -->
       <ul>
-        <li><%= link_to "root", root_path</li>
+        <li><%= link_to "root", root_path %></li>
         <li>Run rake routes >> appliation.html.erb and edit to get links</li>
 
       </ul>
