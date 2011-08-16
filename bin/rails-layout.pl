@@ -69,7 +69,11 @@ sub body {
       <ul>
         <li><%= link_to "root", root_path %></li>
         <li>Run rake routes >> appliation.html.erb and edit to get links</li>
-
+      </ul>
+      <hr />
+      <ul>
+        <li><%= link_to "root", root_path %></li>
+        <li>Run rake routes >> appliation.html.erb and edit to get links</li>
       </ul>
   </div>
   <div id='main'>
