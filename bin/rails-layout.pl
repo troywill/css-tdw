@@ -63,6 +63,7 @@ sub body {
       <h1>header</h1>
   </div>
   <div id='sidebar'>
+      <%= link_to image_tag("troywill-logo.png"), root_path %>
       <h1>navigation</h1>
       <!-- see "Lists as Navigation", page 140, HTML Dog -->
       <!-- see "Doing Away With Unwanted Padding and Margins", page 144, HTML Dog -->
