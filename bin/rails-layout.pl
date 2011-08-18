@@ -164,6 +164,13 @@ sub sidebar_css {
  padding: 0;
  padding-left: .5em;
 }
+
+#sidebar img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
 END
   return $sidebar_css;
 }
