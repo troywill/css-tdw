@@ -70,9 +70,6 @@ sub body {
       <ul>
         <li><%= link_to "root", root_path %></li>
         <li>Run rake routes >> appliation.html.erb and edit to get links</li>
-      </ul>
-      <hr />
-      <ul>
         <li><%= link_to "root", root_path %></li>
         <li>Run rake routes >> appliation.html.erb and edit to get links</li>
       </ul>
@@ -161,7 +158,7 @@ sub sidebar_css {
 #sidebar ul {
  margin: 0;
  padding: 0;
- padding-left: .5em;
+ margin-left: 1.5em;
 }
 
 #sidebar img {
