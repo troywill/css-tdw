@@ -92,11 +92,10 @@ END
 sub head {
     my $head = <<END;
     <head>
-	<link href="style.css" rel="stylesheet" type="text/css" />
 	<title>title</title>
-	<%= stylesheet_link_tag :all %>
-	<%= javascript_include_tag :defaults %>
-	<%= csrf_meta_tag %>
+        <%= stylesheet_link_tag    "application", :media => "all" %>
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tags %>
   </head>
 END
 
